@@ -1,0 +1,23 @@
+1. ftp-simple 설치 
+2. f1 눌러서 ftp-config 파일 수정 
+	[
+		{
+			"name": "myleeERP",
+			"host": "3.36.77.127",
+			"port": 22,
+			"type": "sftp",
+			"username": "centos",
+			"password": "",
+			"privateKey": "C:\\Users\\JUVIS_LMY\\Desktop\\ERP_testkey\\juvis_dev\\juvis_dev.ppk",
+			"path": "/home",
+			"autosave": true,
+			"confirm": false,
+			"sftp.printDebugLig": true
+		}
+	]
+3. f1눌러서 ftp-remote 브랜치 내용 가져오기 
+4. 터미널 + 새 터미널 -> ftp-simple, 출력 확인하면 해당 터미널 확인 가능
+5. premission denied 출력 시, centos에서 권한 주기
+	sudo chown -R centos juvisnext
+	sudo chown -R centos juvis
+6. 수정내용 바로 서버에서 확인 가능
