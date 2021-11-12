@@ -27,27 +27,24 @@
 2.	cgroups (Control Groups) : 자원에 대한 제어를 가능하게 해주는 커널의 기능 
 3.	Docker 구조 
 -	Containerd-shim으로 나눈 각 어플리케이션들을 containerd에서 관리하고, 각 이미지, 네트워크 등의 관리는 Docker Engline에서 이루어진다. 각 독립적인 프로세스로 작동됨 
-사용 이유 
+### 사용 이유 
 -	소프트웨어 버전과 개별 구성과 관련된 세부 업무를 배포 및 관리가 수월해짐
 -	게스트 OS를 설치하지 않아 성능이 좋고 메모리가 경량화된 방식이다. 
 
-
-# Docker 설치
-Sudo yum undate (업데이트)
-Sudo yum install yum-utils device-mapper-persistent-data lvm2 
-(항상 최신버전이 아닐 수 있기 때문에 docker의 저장소를 생성해서 이곳에 설치한다.)
+## Docker 설치
+- Sudo yum undate (업데이트)
+- Sudo yum install yum-utils device-mapper-persistent-data lvm2 (항상 최신버전이 아닐 수 있기 때문에 docker의 저장소를 생성해서 이곳에 설치한다.)
 …………………………………////////////////////////////////////////////////////////////////////……………………………………
-Sudo yum-config-manager –add-repo https://download.docker.com/linux/centos/docker-ce.repo
-(저장소 추가)
-Sudo yum install docker-ce (Docker CE(Community Edition) 최신 버전 설치)
-Sudo systemctl start docker (docker 실행)
-Sudo systemctl status docker (docker 상태)
-Sudo systemctl enable docker (부팅 시 docker 자동 실행 설정)
-Sudo usermod -aG docker $USER 
-(docker 그룹에 현재 접속중인 사용자 계정 추가, root 권한이 아니어도 docker명령어 실행 가능)
-Docker 사용법
-docker -v (현재 버전 확인)
-sudo docker run hello-world (/hello 컨테이너 확인)
-sudo docker ps -a (컨테이너 확인)
+- Sudo yum-config-manager –add-repo https://download.docker.com/linux/centos/docker-ce.repo (저장소 추가)
+- Sudo yum install docker-ce (Docker CE(Community Edition) 최신 버전 설치)
+- Sudo systemctl start docker (docker 실행)
+- Sudo systemctl status docker (docker 상태)
+- Sudo systemctl enable docker (부팅 시 docker 자동 실행 설정)
+- Sudo usermod -aG docker $USER (docker 그룹에 현재 접속중인 사용자 계정 추가, root 권한이 아니어도 docker명령어 실행 가능)
+
+## Docker 사용법
+- docker -v (현재 버전 확인)
+- sudo docker run hello-world (/hello 컨테이너 확인)
+- sudo docker ps -a (컨테이너 확인)
 
 
